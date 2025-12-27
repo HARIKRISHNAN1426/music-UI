@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pure CSS Music UI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#0a0a0a;
+    font-family:'Space Grotesk', sans-serif;
+    color:#e0e0e0;
+}
+
+/* MAIN PLAYER */
+.player{
+    width:720px;
+    height:360px;
+    background:linear-gradient(135deg,#050505,#141414);
+    border-radius:20px;
+    display:grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    box-shadow:0 30px 60px rgba(0,0,0,0.8);
+    overflow:hidden;
+}
+
+/* LEFT PANEL */
+.info{
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.track h1{
+    margin:0;
+    font-size:28px;
+    color:#64b5f6;
+}
+
+.track p{
+    margin-top:8px;
+    opacity:0.7;
+}
+
+/* IMAGE CARD */
+.visual{
+    width:260px;
+    height:140px;
+    border-radius:14px;
+    background-image:url("music.jpg");
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* RIGHT PANEL */
+.controls{
+    background:#0f0f0f;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+/* BUTTON COLUMN */
+.column{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:26px;
+}
+
+/* STANDARD BUTTON */
+.btn{
+    width:46px;
+    height:46px;
+    border-radius:10px;
+    border:1px solid #1e88e5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+}
+
+/* MAIN PLAY BUTTON */
+.play{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#1e88e5;
+    font-size:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* SLIDER */
+.slider{
+    width:6px;
+    height:140px;
+    background:#222;
+    border-radius:10px;
+    position:relative;
+}
+
+.slider::after{
+    content:'';
+    position:absolute;
+    bottom:25%;
+    left:0;
+    width:100%;
+    height:35%;
+    background:#1e88e5;
+    border-radius:10px;
+}
+
+/* LABELS */
+.label{
+    font-size:12px;
+    opacity:0.6;
+}
+</style>
+</head>
+<body>
+
+<div class="player">
+
+    <!-- LEFT INFO -->
+    <div class="info">
+        <div class="track">
+            <h1>Midnight Drive</h1>
+            <p>Electronic / Chillwave</p>
+        </div>
+
+        <div class="visual"></div>
+    </div>
+
+    <!-- RIGHT CONTROLS -->
+    <div class="controls">
+
+        <div class="column">
+            <div class="btn">⏮</div>
+            <div class="play">▶</div>
+            <div class="btn">⏭</div>
+            <div class="label">Track</div>
+        </div>
+
+        <div class="column">
+            <div class="slider"></div>
+            <div class="label">Volume</div>
+        </div>
+
+        <div class="column">
+            <div class="btn">⚙</div>
+            <div class="btn">⟳</div>
+            <div class="label">Settings</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
